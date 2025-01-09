@@ -12,4 +12,4 @@ lang = args.lang
 df_dataset = pd.read_excel("aspen_dataset.xlsx")
 df_subset = df_dataset[["story_id", plan, lang]]
 df_nonempty = df_subset.loc[df_subset[lang]!="--"]
-df.to_excel("output_dataset.xlsx")
+df_nonempty.to_excel("output_dataset.xlsx")
